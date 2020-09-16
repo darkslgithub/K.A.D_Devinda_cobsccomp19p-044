@@ -1,15 +1,16 @@
 //
-//  K_A_D_Devinda_cobsccomp191p_044Tests.swift
+//  LoginTest.swift
 //  K.A.D.Devinda_cobsccomp191p-044Tests
 //
-//  Created by dasun on 9/14/20.
+//  Created by dasun on 9/16/20.
 //  Copyright © 2020 NIBM. All rights reserved.
 //
 
 import XCTest
-@testable import K_A_D_Devinda_cobsccomp191p_044
 
-class K_A_D_Devinda_cobsccomp191p_044Tests: XCTestCase {
+class LoginTest: XCTestCase {
+    
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

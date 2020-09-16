@@ -181,7 +181,7 @@ class RegisterViewController: UIViewController {
                ] as [String : Any]
 
                
-                   let geoFire = GeoFire(firebaseRef: REF_USERS_LOCATIONS)
+                   let geoFire = GeoFire(firebaseRef: REF_USER_LOCATIONS)
 
                    guard let location = self.location else { return }
 
