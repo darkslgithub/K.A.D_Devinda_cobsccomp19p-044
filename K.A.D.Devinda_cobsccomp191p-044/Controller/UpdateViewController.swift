@@ -2,8 +2,8 @@
 //  UpdateViewController.swift
 //  K.A.D.Devinda_cobsccomp191p-044
 //
-//  Created by HASHAN on 9/4/20.
-//  Copyright © 2020 NIBM-COBSCCOMP191P-021. All rights reserved.
+// Created by dasun on 9/14/20.
+// Copyright © 2020 NIBM. All rights reserved.
 //
 
 import UIKit
