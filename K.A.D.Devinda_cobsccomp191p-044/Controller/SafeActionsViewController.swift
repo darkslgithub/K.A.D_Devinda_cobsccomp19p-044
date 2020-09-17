@@ -1,6 +1,6 @@
 //
 //  SafeActionsViewController.swift
-//  NIBM COVID19
+//  K.A.D.Devinda_cobsccomp191p-044
 //
 //  Created by dasun on 9/4/20.
 //  Copyright © 2020 NIBM. All rights reserved.
