@@ -146,7 +146,8 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func showProfile() {
-        let vc = ProfileViewController()
+        //let vc = ProfileViewController()
+         let vc = TestprofileViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -19,9 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-       // window?.rootViewController = HomeViewController()
+        //window?.rootViewController = TestprofileViewController()
         window?.rootViewController = MainTabBarController()
         return true
     }
+    
+    
+    
 
 }

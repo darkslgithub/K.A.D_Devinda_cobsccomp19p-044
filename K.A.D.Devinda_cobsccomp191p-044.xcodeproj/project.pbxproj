@@ -18,7 +18,6 @@
 		91541C512511D6090092C1F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C502511D6090092C1F4 /* RegisterViewController.swift */; };
 		91541C532511D6180092C1F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C522511D6180092C1F4 /* HomeViewController.swift */; };
 		91541C552511D6250092C1F4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C542511D6250092C1F4 /* MainTabBarController.swift */; };
-		91541C572511D6390092C1F4 /* SplashScreaenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C562511D6390092C1F4 /* SplashScreaenViewController.swift */; };
 		91541C592511D6630092C1F4 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C582511D6630092C1F4 /* SurveyViewController.swift */; };
 		91541C5B2511D6890092C1F4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C5A2511D6890092C1F4 /* ResultViewController.swift */; };
 		91541C5D2511D6A00092C1F4 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C5C2511D6A00092C1F4 /* UpdateViewController.swift */; };
@@ -32,6 +31,9 @@
 		91541C702511EBEC0092C1F4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C6F2511EBEC0092C1F4 /* Service.swift */; };
 		91541C742511ED740092C1F4 /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C732511ED740092C1F4 /* SurveyCVCell.swift */; };
 		91541C792511F4FA0092C1F4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91541C782511F4FA0092C1F4 /* Info.plist */; };
+		9165450D2512853E002D46A4 /* TestprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450C2512853E002D46A4 /* TestprofileViewController.swift */; };
+		9165450F25128891002D46A4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450E25128891002D46A4 /* TestViewController.swift */; };
+		9165451125128E5C002D46A4 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165451025128E5C002D46A4 /* DropViewController.swift */; };
 		9170214C250FE9FF005B8AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170214B250FE9FF005B8AD7 /* AppDelegate.swift */; };
 		91702155250FEA03005B8AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91702154250FEA03005B8AD7 /* Assets.xcassets */; };
 		91702158250FEA03005B8AD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91702156250FEA03005B8AD7 /* LaunchScreen.storyboard */; };
@@ -75,7 +77,6 @@
 		91541C502511D6090092C1F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		91541C522511D6180092C1F4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91541C542511D6250092C1F4 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		91541C562511D6390092C1F4 /* SplashScreaenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreaenViewController.swift; sourceTree = "<group>"; };
 		91541C582511D6630092C1F4 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		91541C5A2511D6890092C1F4 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		91541C5C2511D6A00092C1F4 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +91,9 @@
 		91541C732511ED740092C1F4 /* SurveyCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyCVCell.swift; path = "../../../../IOS/NIBM COVID19/NIBM COVID19/Controller/SurveyCVCell.swift"; sourceTree = "<group>"; };
 		91541C772511F4CA0092C1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91541C782511F4FA0092C1F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9165450C2512853E002D46A4 /* TestprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestprofileViewController.swift; sourceTree = "<group>"; };
+		9165450E25128891002D46A4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9165451025128E5C002D46A4 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		91702148250FE9FF005B8AD7 /* K.A.D.Devinda_cobsccomp191p-044.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K.A.D.Devinda_cobsccomp191p-044.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9170214B250FE9FF005B8AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91702154250FEA03005B8AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,9 +190,11 @@
 				91541C642511D6EA0092C1F4 /* SettingViewController.swift */,
 				91541C662511D6F90092C1F4 /* ProfileViewController.swift */,
 				91541C6A2511D7150092C1F4 /* ContactViewController.swift */,
-				91541C562511D6390092C1F4 /* SplashScreaenViewController.swift */,
 				91541C622511D6DB0092C1F4 /* LoginViewController.swift */,
 				91541C502511D6090092C1F4 /* RegisterViewController.swift */,
+				9165450C2512853E002D46A4 /* TestprofileViewController.swift */,
+				9165450E25128891002D46A4 /* TestViewController.swift */,
+				9165451025128E5C002D46A4 /* DropViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -515,16 +521,18 @@
 				91541C632511D6DC0092C1F4 /* LoginViewController.swift in Sources */,
 				91541C512511D6090092C1F4 /* RegisterViewController.swift in Sources */,
 				91541C672511D6F90092C1F4 /* ProfileViewController.swift in Sources */,
-				91541C572511D6390092C1F4 /* SplashScreaenViewController.swift in Sources */,
 				91541C492511D5960092C1F4 /* AuthUIBtn.swift in Sources */,
 				91509CBB25122943003996A1 /* SafeActionsViewController.swift in Sources */,
+				9165451125128E5C002D46A4 /* DropViewController.swift in Sources */,
 				91541C552511D6250092C1F4 /* MainTabBarController.swift in Sources */,
 				91541C5F2511D6B60092C1F4 /* SplashOneViewController.swift in Sources */,
 				91541C612511D6C20092C1F4 /* WelcomeViewController.swift in Sources */,
 				91541C442511D52D0092C1F4 /* UserAnnotation.swift in Sources */,
 				9170214C250FE9FF005B8AD7 /* AppDelegate.swift in Sources */,
+				9165450F25128891002D46A4 /* TestViewController.swift in Sources */,
 				91541C532511D6180092C1F4 /* HomeViewController.swift in Sources */,
 				91541C462511D53B0092C1F4 /* User.swift in Sources */,
+				9165450D2512853E002D46A4 /* TestprofileViewController.swift in Sources */,
 				91541C5B2511D6890092C1F4 /* ResultViewController.swift in Sources */,
 				91541C592511D6630092C1F4 /* SurveyViewController.swift in Sources */,
 				91509CBD25122A1B003996A1 /* LocationInputUIView.swift in Sources */,

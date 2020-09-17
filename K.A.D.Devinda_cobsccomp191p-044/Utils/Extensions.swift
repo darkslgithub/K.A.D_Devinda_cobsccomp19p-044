@@ -21,7 +21,8 @@ extension UIColor {
 
 extension UIView {
     
-    func inputContainerView(image: UIImage, textField: UITextField? = nil, segentedControl: UISegmentedControl? = nil) -> UIView {
+    func inputContainerView(image: UIImage, textField: UITextField? = nil, segentedControl: UISegmentedControl? = nil)
+        -> UIView {
         let view = UIView()
         
         let imageView = UIImageView()
