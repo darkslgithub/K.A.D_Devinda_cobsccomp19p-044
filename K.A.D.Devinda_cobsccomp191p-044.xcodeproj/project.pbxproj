@@ -25,13 +25,12 @@
 		91541C612511D6C20092C1F4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C602511D6C20092C1F4 /* WelcomeViewController.swift */; };
 		91541C632511D6DC0092C1F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C622511D6DB0092C1F4 /* LoginViewController.swift */; };
 		91541C652511D6EA0092C1F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C642511D6EA0092C1F4 /* SettingViewController.swift */; };
-		91541C672511D6F90092C1F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C662511D6F90092C1F4 /* ProfileViewController.swift */; };
 		91541C6B2511D7150092C1F4 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C6A2511D7150092C1F4 /* ContactViewController.swift */; };
 		91541C6E2511D9EE0092C1F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91541C6D2511D9ED0092C1F4 /* GoogleService-Info.plist */; };
 		91541C702511EBEC0092C1F4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C6F2511EBEC0092C1F4 /* Service.swift */; };
 		91541C742511ED740092C1F4 /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C732511ED740092C1F4 /* SurveyCVCell.swift */; };
 		91541C792511F4FA0092C1F4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91541C782511F4FA0092C1F4 /* Info.plist */; };
-		9165450D2512853E002D46A4 /* TestprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450C2512853E002D46A4 /* TestprofileViewController.swift */; };
+		9165450D2512853E002D46A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450C2512853E002D46A4 /* ProfileViewController.swift */; };
 		9165450F25128891002D46A4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450E25128891002D46A4 /* TestViewController.swift */; };
 		9165451125128E5C002D46A4 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165451025128E5C002D46A4 /* DropViewController.swift */; };
 		9170214C250FE9FF005B8AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170214B250FE9FF005B8AD7 /* AppDelegate.swift */; };
@@ -39,6 +38,9 @@
 		91702158250FEA03005B8AD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91702156250FEA03005B8AD7 /* LaunchScreen.storyboard */; };
 		91702163250FEA03005B8AD7 /* K_A_D_Devinda_cobsccomp191p_044Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91702162250FEA03005B8AD7 /* K_A_D_Devinda_cobsccomp191p_044Tests.swift */; };
 		9170216E250FEA03005B8AD7 /* K_A_D_Devinda_cobsccomp191p_044UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170216D250FEA03005B8AD7 /* K_A_D_Devinda_cobsccomp191p_044UITests.swift */; };
+		91F836262514A20C00D84A49 /* SplashTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F836252514A20C00D84A49 /* SplashTwoViewController.swift */; };
+		91F836282514C02900D84A49 /* SplashThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F836272514C02900D84A49 /* SplashThreeViewController.swift */; };
+		91F8362A2514C2E700D84A49 /* SplashFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F836292514C2E700D84A49 /* SplashFourViewController.swift */; };
 		9D96674972CC9676D7AB3AEC /* Pods_K_A_D_Devinda_cobsccomp191p_044_K_A_D_Devinda_cobsccomp191p_044UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975BA744C150FA2969507335 /* Pods_K_A_D_Devinda_cobsccomp191p_044_K_A_D_Devinda_cobsccomp191p_044UITests.framework */; };
 		B95F319DC7C1D0B94927423E /* Pods_K_A_D_Devinda_cobsccomp191p_044.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B1BC13CBF0971CB9831830 /* Pods_K_A_D_Devinda_cobsccomp191p_044.framework */; };
 		C1E1CB5E82CE5336EA8EA9A4 /* Pods_K_A_D_Devinda_cobsccomp191p_044Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C882F9A25BC9626B185285F /* Pods_K_A_D_Devinda_cobsccomp191p_044Tests.framework */; };
@@ -84,14 +86,13 @@
 		91541C602511D6C20092C1F4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		91541C622511D6DB0092C1F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		91541C642511D6EA0092C1F4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		91541C662511D6F90092C1F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		91541C6A2511D7150092C1F4 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		91541C6D2511D9ED0092C1F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91541C6F2511EBEC0092C1F4 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		91541C732511ED740092C1F4 /* SurveyCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyCVCell.swift; path = "../../../../IOS/NIBM COVID19/NIBM COVID19/Controller/SurveyCVCell.swift"; sourceTree = "<group>"; };
 		91541C772511F4CA0092C1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91541C782511F4FA0092C1F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9165450C2512853E002D46A4 /* TestprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestprofileViewController.swift; sourceTree = "<group>"; };
+		9165450C2512853E002D46A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9165450E25128891002D46A4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9165451025128E5C002D46A4 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		91702148250FE9FF005B8AD7 /* K.A.D.Devinda_cobsccomp191p-044.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K.A.D.Devinda_cobsccomp191p-044.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +104,9 @@
 		91702169250FEA03005B8AD7 /* K.A.D.Devinda_cobsccomp191p-044UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K.A.D.Devinda_cobsccomp191p-044UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9170216D250FEA03005B8AD7 /* K_A_D_Devinda_cobsccomp191p_044UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K_A_D_Devinda_cobsccomp191p_044UITests.swift; sourceTree = "<group>"; };
 		9170216F250FEA03005B8AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F836252514A20C00D84A49 /* SplashTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTwoViewController.swift; sourceTree = "<group>"; };
+		91F836272514C02900D84A49 /* SplashThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashThreeViewController.swift; sourceTree = "<group>"; };
+		91F836292514C2E700D84A49 /* SplashFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFourViewController.swift; sourceTree = "<group>"; };
 		975BA744C150FA2969507335 /* Pods_K_A_D_Devinda_cobsccomp191p_044_K_A_D_Devinda_cobsccomp191p_044UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_A_D_Devinda_cobsccomp191p_044_K_A_D_Devinda_cobsccomp191p_044UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09DFB23389F03B56EE67064 /* Pods-K.A.D.Devinda_cobsccomp191p-044Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K.A.D.Devinda_cobsccomp191p-044Tests.release.xcconfig"; path = "Target Support Files/Pods-K.A.D.Devinda_cobsccomp191p-044Tests/Pods-K.A.D.Devinda_cobsccomp191p-044Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D0919E75C335EFE4C9C5922F /* Pods-K.A.D.Devinda_cobsccomp191p-044.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K.A.D.Devinda_cobsccomp191p-044.release.xcconfig"; path = "Target Support Files/Pods-K.A.D.Devinda_cobsccomp191p-044/Pods-K.A.D.Devinda_cobsccomp191p-044.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,13 +192,15 @@
 				91541C732511ED740092C1F4 /* SurveyCVCell.swift */,
 				91509CBA25122942003996A1 /* SafeActionsViewController.swift */,
 				91541C642511D6EA0092C1F4 /* SettingViewController.swift */,
-				91541C662511D6F90092C1F4 /* ProfileViewController.swift */,
 				91541C6A2511D7150092C1F4 /* ContactViewController.swift */,
 				91541C622511D6DB0092C1F4 /* LoginViewController.swift */,
 				91541C502511D6090092C1F4 /* RegisterViewController.swift */,
-				9165450C2512853E002D46A4 /* TestprofileViewController.swift */,
+				9165450C2512853E002D46A4 /* ProfileViewController.swift */,
 				9165450E25128891002D46A4 /* TestViewController.swift */,
 				9165451025128E5C002D46A4 /* DropViewController.swift */,
+				91F836252514A20C00D84A49 /* SplashTwoViewController.swift */,
+				91F836272514C02900D84A49 /* SplashThreeViewController.swift */,
+				91F836292514C2E700D84A49 /* SplashFourViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,9 +524,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F836282514C02900D84A49 /* SplashThreeViewController.swift in Sources */,
 				91541C632511D6DC0092C1F4 /* LoginViewController.swift in Sources */,
 				91541C512511D6090092C1F4 /* RegisterViewController.swift in Sources */,
-				91541C672511D6F90092C1F4 /* ProfileViewController.swift in Sources */,
 				91541C492511D5960092C1F4 /* AuthUIBtn.swift in Sources */,
 				91509CBB25122943003996A1 /* SafeActionsViewController.swift in Sources */,
 				9165451125128E5C002D46A4 /* DropViewController.swift in Sources */,
@@ -528,11 +534,13 @@
 				91541C5F2511D6B60092C1F4 /* SplashOneViewController.swift in Sources */,
 				91541C612511D6C20092C1F4 /* WelcomeViewController.swift in Sources */,
 				91541C442511D52D0092C1F4 /* UserAnnotation.swift in Sources */,
+				91F8362A2514C2E700D84A49 /* SplashFourViewController.swift in Sources */,
 				9170214C250FE9FF005B8AD7 /* AppDelegate.swift in Sources */,
+				91F836262514A20C00D84A49 /* SplashTwoViewController.swift in Sources */,
 				9165450F25128891002D46A4 /* TestViewController.swift in Sources */,
 				91541C532511D6180092C1F4 /* HomeViewController.swift in Sources */,
 				91541C462511D53B0092C1F4 /* User.swift in Sources */,
-				9165450D2512853E002D46A4 /* TestprofileViewController.swift in Sources */,
+				9165450D2512853E002D46A4 /* ProfileViewController.swift in Sources */,
 				91541C5B2511D6890092C1F4 /* ResultViewController.swift in Sources */,
 				91541C592511D6630092C1F4 /* SurveyViewController.swift in Sources */,
 				91509CBD25122A1B003996A1 /* LocationInputUIView.swift in Sources */,

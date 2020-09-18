@@ -86,7 +86,22 @@ class LoginViewController: UIViewController {
            guard let email = emailTextFiled.text else { return }
            guard let password = passwordTextFiled.text else { return }
         
-        print(email)
+        if email.isEmpty  {
+            let alert = UIAlertController(title: "Please Enter Your Email", message: "Please enter your email address", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if password.isEmpty  {
+            let alert = UIAlertController(title: "Please Enter The Password!", message: "Please enter your password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if password.count < 6  {
+            let alert = UIAlertController(title: "Invalid Password!", message: "Password should contain least 6 charactors", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
            
            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                if let error = error {

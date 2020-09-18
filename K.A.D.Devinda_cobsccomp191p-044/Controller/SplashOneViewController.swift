@@ -70,33 +70,29 @@ class SplashOneViewController: UIViewController {
                   return questionOneLabel
               }()
     
-    private let nextLabel: UILabel = {
-                     let nextLabel = UILabel()
-                     nextLabel.text = "Next"
-                     nextLabel.font = UIFont(name: "Avenir-Light", size: 18)
-                     nextLabel.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
-                     nextLabel.textColor = .blue
-                     return nextLabel
-                 }()
+//    private let nextLabel: UILabel = {
+//                     let nextLabel = UILabel()
+//                     nextLabel.text = "Next"
+//                     nextLabel.font = UIFont(name: "Avenir-Light", size: 18)
+//                     nextLabel.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
+//                     nextLabel.textColor = .blue
+//                     return nextLabel
+//                 }()
+//    
+    let nextButton: UIButton = {
+           let button = UIButton(type: .system)
+           let attributedTitle = NSMutableAttributedString(string: "Next", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint])
+           
+//           attributedTitle.append(NSAttributedString(string: "Next", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+           
+           button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
+        
+           
+           button.setAttributedTitle(attributedTitle, for: .normal)
+           return button
+       }()
     
-//           private lazy var questionOneContainerView: UIView = {
-//                  let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: questionOneTextFiled)
-//                 view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//
-//
-//                  return view
-//              }()
-//          private let questionOneTextFiled: UITextField = {
-//           return UITextField().textField(withPlaceholder: "", isSecureTextEntry: false)
-//         }()
-//
-      
-        
-        
-        
-        
-        
-        
+
         
         
         // MARK: - Lifecycale
@@ -113,6 +109,11 @@ class SplashOneViewController: UIViewController {
              @objc func handleGoBack() {
                   navigationController?.popViewController(animated: true)
                }
+    
+            @objc func handleNext() {
+                   let vc = SplashTwoViewController()
+                    navigationController?.pushViewController(vc, animated: true)
+                 }
         
         
          //MARk:- helper Function
@@ -148,9 +149,13 @@ class SplashOneViewController: UIViewController {
            NextImgView.centerX(inView: view)
             
             //view.backgroundColor = .white
-            view.addSubview(nextLabel)
-            nextLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 550)
-            nextLabel.centerX(inView: view)
+            //view.addSubview(nextButton)
+//            nextLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 550)
+//            nextLabel.centerX(inView: view)
+            
+            view.addSubview(nextButton)
+            nextButton.centerX(inView: view)
+            nextButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 550)
             
 //            let stack = UIStackView(arrangedSubviews: [questionOneLabel])
 //            stack.axis = .vertical

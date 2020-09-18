@@ -163,6 +163,40 @@ class RegisterViewController: UIViewController {
            guard let email = emailTextFiled.text else { return }
            guard let role = roleTextFiled.text else { return }
            guard let password = passwordTextFiled.text else { return }
+        
+        //Validations
+               if firstname.isEmpty {
+                let alert = UIAlertController(title: "Please Enter Your First Name!", message: "Please enter your first name", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               } else if lastname.isEmpty  {
+                   let alert = UIAlertController(title: "Please Enter Your Last Name!", message: "Please enter your last name", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               } else if role.isEmpty  {
+                   let alert = UIAlertController(title: "Please Enter Your Role!", message: "Please enter your role (Admin/User)", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               } else if email.isEmpty  {
+                   let alert = UIAlertController(title: "Please Enter Your Email!", message: "Please enter your email address", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               } else if password.isEmpty  {
+                   let alert = UIAlertController(title: "Please Enter The Password!", message: "Please enter your password", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               } else if password.count < 6  {
+                   let alert = UIAlertController(title: "Password is not valid!", message: "Password should contain least 6 charactors", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   return
+               }
+               
          
            
            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in

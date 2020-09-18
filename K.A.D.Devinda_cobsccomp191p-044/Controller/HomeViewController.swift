@@ -43,9 +43,9 @@ class HomeViewController: UIViewController {
         tile.backgroundColor = .white
         
         let avatar = UIImageView()
-        avatar.image = UIImage(named: "COVID19")
+        avatar.image = UIImage(named: "corona-logo")
         tile.addSubview(avatar)
-        avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 125, height: 125)
+        avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 150, height: 90)
         avatar.centerY(inView: tile)
         
         let title = UILabel()
