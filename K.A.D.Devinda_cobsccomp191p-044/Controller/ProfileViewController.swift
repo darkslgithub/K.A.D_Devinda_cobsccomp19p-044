@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
            }()
        
            private lazy var profileContainerView: UIView = {
-                 let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: nameTextFiled)
+                 let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: nameTextFiled)
                  view.heightAnchor.constraint(equalToConstant: 50).isActive = true
                  return view
            }()
@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController {
              private let nameTextFiled: UITextField = {
                  return UITextField().textField(withPlaceholder: "name", isSecureTextEntry: false)
              }()
-            
+                
             private lazy var indexContainerView: UIView = {
                 let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: indexTextFiled )
                 view.heightAnchor.constraint(equalToConstant: 50).isActive = true

@@ -131,6 +131,7 @@ class HomeViewController: UIViewController {
         moreBtn.setTitle("See More", for: .normal)
         moreBtn.setTitleColor(.systemBlue, for: .normal)
         moreBtn.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+          moreBtn.addTarget(self, action: #selector(showFullMap), for: .touchUpInside)
         tile.addSubview(moreBtn)
         moreBtn.anchor(top: tile.topAnchor, right: tile.rightAnchor, paddingTop: 14, paddingRight: 16)
         
@@ -249,11 +250,16 @@ class HomeViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func showNotific() {
-        print("notific")
-//        let vc = SafeActionsViewController()
-//        vc.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = NotificationsVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func showFullMap() {
+         let vc = FullMapViewController()
+         vc.hidesBottomBarWhenPushed = true
+         self.navigationController?.pushViewController(vc, animated: true)
+     }
     
     @objc func showSafeActions() {
         let vc = SplashOneViewController()
@@ -357,7 +363,8 @@ class HomeViewController: UIViewController {
         let screensize: CGRect = UIScreen.main.bounds
         
         configNavBar()
-        view.backgroundColor = .systemGray6
+        //view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         view.addSubview(mainTile)
         mainTile.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 0.26 * screensize.height)
         view.addSubview(scrollView)
