@@ -112,7 +112,7 @@ class SplashOneViewController: UIViewController {
     
             @objc func handleNext() {
                    let vc = SplashTwoViewController()
-                    navigationController?.pushViewController(vc, animated: true)
+                    navigationController?.pushViewController(vc, animated: false)
                  }
         
         
@@ -121,6 +121,8 @@ class SplashOneViewController: UIViewController {
             configNavBar()
             
              view.backgroundColor = .white
+            
+            
                    view.addSubview(backButton)
                    backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 10, paddingLeft: 16, width: 40, height: 40)
     

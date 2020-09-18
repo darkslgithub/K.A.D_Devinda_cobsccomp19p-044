@@ -17,6 +17,10 @@ extension UIColor {
     static let backgroundColor = rgb(red: 25, green: 25, blue: 25)
     static let whiteBackground = rgb(red: 255, green: 250, blue: 240)
     static let mainBlueTint = rgb(red: 17, green: 154, blue: 237)
+    
+    static let updatepagecolor = rgb(red: 64, green: 168, blue: 196)
+    static let updatetilecolor = rgb(red: 199, green: 236, blue: 238)
+    
 }
 
 extension UIView {

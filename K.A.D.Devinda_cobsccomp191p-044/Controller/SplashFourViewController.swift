@@ -110,7 +110,7 @@ class SplashFourViewController: UIViewController {
                        }
             
                     @objc func handleNext() {
-                        self.navigationController?.popToRootViewController(animated: true)
+                        self.navigationController?.popToRootViewController(animated: false)
                         
                          }
                 

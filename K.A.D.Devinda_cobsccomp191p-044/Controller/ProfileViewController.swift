@@ -33,7 +33,8 @@ class ProfileViewController: UIViewController {
     
     private let blankView: UIView = {
         let blank = UIView()
-        blank.backgroundColor = .white
+        //blank.backgroundColor = .white
+        blank.backgroundColor = .updatetilecolor
         return blank
     }()
     
@@ -106,7 +107,9 @@ class ProfileViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        view.backgroundColor = .systemGray6
+        //view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
+        
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)
         titleLbl.centerX(inView: view)

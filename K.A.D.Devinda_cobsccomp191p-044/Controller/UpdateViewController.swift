@@ -29,7 +29,8 @@ class UpdateViewController: UIViewController {
     
     private let notificTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        //tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         tile.addTarget(self, action: #selector(showNotifications), for: .touchUpInside)
@@ -55,7 +56,7 @@ class UpdateViewController: UIViewController {
     
     private let surveyTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         tile.addTarget(self, action: #selector(showNewSurvey), for: .touchUpInside)
@@ -100,7 +101,7 @@ class UpdateViewController: UIViewController {
     
     private lazy var tempTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         
@@ -175,8 +176,7 @@ class UpdateViewController: UIViewController {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         let temperature = Float(temp)
         
-        // 102°F - 103°F for COVID19
-        // 38.8°C - 39.4°C for COVID19
+      
         
         if temperature == nil {
             let alert = UIAlertController(title: "Temprature is Required!", message: "Please enter your body temprature", preferredStyle: .alert)
@@ -210,7 +210,8 @@ class UpdateViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        view.backgroundColor = .systemGray6
+        //view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)

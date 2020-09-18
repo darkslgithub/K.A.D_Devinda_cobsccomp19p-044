@@ -80,14 +80,16 @@ class RegisterViewController: UIViewController {
        private let signUpButton: AuthUIBtn = {
            let button = AuthUIBtn(type: .system)
            button.setTitle("Register", for: .normal)
-           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+           button.setTitleColor(.black, for: .normal)
+           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+           //button.titleLabel?.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
            button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
            return button
        }()
        
        let alreadyHaveAccountButton: UIButton = {
            let button = UIButton(type: .system)
-           let attributedTitle = NSMutableAttributedString(string: "Already have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+           let attributedTitle = NSMutableAttributedString(string: "Already have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
            
            attributedTitle.append(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
            

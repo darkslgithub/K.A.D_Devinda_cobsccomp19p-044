@@ -35,6 +35,8 @@ class WelcomeViewController: UIViewController {
     private let regPageButton: AuthUIBtn = {
         let button = AuthUIBtn(type: .system)
         button.setTitle("Create an Account", for: .normal)
+        //button.backgroundColor = UIColor.purple
+        button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
         button.addTarget(self, action: #selector(showRegPage), for: .touchUpInside)
         
@@ -44,7 +46,7 @@ class WelcomeViewController: UIViewController {
     
     private let loginPageButton: UIButton = {
         let button = UIButton(type: .system)
-        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.black])
+        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.black])
         button.addTarget(self, action: #selector(showLoginPage), for: .touchUpInside)
         button.setAttributedTitle(buttonTitle, for: .normal)
         
@@ -53,11 +55,11 @@ class WelcomeViewController: UIViewController {
     
     private let termsAndConBtn: UIButton = {
         let button = UIButton(type: .system)
-        let attributedText = NSMutableAttributedString(string: "By signing up, you agree with the ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray])
+        let attributedText = NSMutableAttributedString(string: "By signing up, you agree with the ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
         
-        attributedText.append(NSAttributedString(string: "Terms of Service", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-        attributedText.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
-        attributedText.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+        attributedText.append(NSAttributedString(string: "Terms of Service", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+        attributedText.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
         
         button.addTarget(self, action: #selector(showRegPage), for: .touchUpInside)
         button.setAttributedTitle(attributedText, for: .normal)
@@ -113,10 +115,10 @@ class WelcomeViewController: UIViewController {
 
 //        view.addSubview(stack)
 //        stack.anchor(top: WelcomeImgView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingRight: 16)
-//
-//        view.addSubview(termsAndConBtn)
-//        termsAndConBtn.centerX(inView: view)
-//        termsAndConBtn.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right:  view.rightAnchor, paddingLeft: 16, paddingBottom:16, paddingRight: 16, height: 50)
+
+        view.addSubview(termsAndConBtn)
+        termsAndConBtn.centerX(inView: view)
+        termsAndConBtn.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right:  view.rightAnchor, paddingLeft: 16, paddingBottom:16, paddingRight: 16, height: 50)
     }
     
     

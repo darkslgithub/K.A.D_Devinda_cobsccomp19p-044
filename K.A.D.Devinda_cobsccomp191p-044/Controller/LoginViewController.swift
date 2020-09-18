@@ -44,7 +44,8 @@ class LoginViewController: UIViewController {
     private let loginButton: AuthUIBtn = {
         let button = AuthUIBtn(type: .system)
         button.setTitle("Log In", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+         button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
         return button
     }()

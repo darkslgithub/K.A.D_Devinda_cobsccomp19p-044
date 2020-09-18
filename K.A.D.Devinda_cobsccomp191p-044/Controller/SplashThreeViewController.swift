@@ -112,7 +112,7 @@ class SplashThreeViewController: UIViewController {
              
                      @objc func handleNext() {
                             let vc = SplashFourViewController()
-                             navigationController?.pushViewController(vc, animated: true)
+                             navigationController?.pushViewController(vc, animated: false)
                           }
                  
                  

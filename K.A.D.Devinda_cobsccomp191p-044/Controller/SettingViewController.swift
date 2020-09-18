@@ -20,12 +20,14 @@ class SettingsViewController: UIViewController {
         label.text = "Settings"
         label.font = UIFont(name: "Avenir-Light", size: 30)
         label.textColor = .black
+        
         return label
     }()
     
     private let profileTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+       // tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         
         let title = UILabel()
         title.text = "Profile"
@@ -56,7 +58,8 @@ class SettingsViewController: UIViewController {
     
     private let contactTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        //tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         
         let title = UILabel()
         title.text = "Contact Us / About Us"
@@ -87,7 +90,8 @@ class SettingsViewController: UIViewController {
     
     private let shareTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        //tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         
         let title = UILabel()
         title.text = "Share with friend"
@@ -112,7 +116,8 @@ class SettingsViewController: UIViewController {
     
     private let blankView: UIView = {
         let blank = UIView()
-        blank.backgroundColor = .white
+        //blank.backgroundColor = .white
+        blank.backgroundColor = .updatepagecolor
         
         let separatorView = UIView()
         separatorView.backgroundColor = .lightGray
@@ -124,7 +129,8 @@ class SettingsViewController: UIViewController {
     
     private let logoutButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+       // button.backgroundColor = .white
+        button.backgroundColor = .updatetilecolor
         button.setTitle("LOGOUT", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
@@ -166,7 +172,8 @@ class SettingsViewController: UIViewController {
     func configUI() {
         configNavBar()
         
-        view.backgroundColor = .systemGray6
+        //view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)

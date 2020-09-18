@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import FirebaseAuth
 import MapKit
+import FirebaseAuth
+import LocalAuthentication
 
 private let reuseIdentifier = "LocationCell"
 private let annotationIdentifier = "UserAnnotation"
@@ -79,7 +80,8 @@ class HomeViewController: UIViewController {
     
     private let notificTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        //tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         
@@ -117,7 +119,8 @@ class HomeViewController: UIViewController {
     
     private let caseTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
+        //tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         
         let title = UILabel()
         title.text = "University Case Update"
@@ -166,21 +169,21 @@ class HomeViewController: UIViewController {
         greenDot.centerX(inView: recoveredUI)
 
         let infectedCount = UILabel()
-        infectedCount.text = "3"
+        infectedCount.text = "6"
         infectedCount.font = UIFont(name: "Avenir-Medium", size: 48)
         infectedUI.addSubview(infectedCount)
         infectedCount.anchor(top: yellowDot.bottomAnchor, paddingTop: 12)
         infectedCount.centerX(inView: infectedUI)
 
         let deathsCount = UILabel()
-        deathsCount.text = "0"
+        deathsCount.text = "2"
         deathsCount.font = UIFont(name: "Avenir-Medium", size: 48)
         deathsUI.addSubview(deathsCount)
         deathsCount.anchor(top: redDot.bottomAnchor, paddingTop: 12)
         deathsCount.centerX(inView: deathsUI)
 
         let recoveredCount = UILabel()
-        recoveredCount.text = "12"
+        recoveredCount.text = "15"
         recoveredCount.font = UIFont(name: "Avenir-Medium", size: 48)
         recoveredUI.addSubview(recoveredCount)
         recoveredCount.anchor(top: greenDot.bottomAnchor, paddingTop: 12)
@@ -293,6 +296,54 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK:- FaceID
+       
+       func faceID(){
+           let context = LAContext()
+           var error: NSError?
+           
+           if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+               let reason = "Identify yourself!"
+               
+               context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                   [weak self] success, authenticationError in
+                   
+                   DispatchQueue.main.async {
+                       if success {
+                           let ac = UIAlertController(title: "Authentication success", message: "Well Done", preferredStyle: .alert)
+                           ac.addAction(UIAlertAction(title: "Happy", style: .default))
+                           self?.present(ac, animated: true)
+                       } else {
+                           let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
+                           ac.addAction(UIAlertAction(title: "OK", style: .default))
+                           self?.signOut()
+                           //  self?.present(ac, animated: true)
+                           self?.dismiss(animated: true, completion: nil)
+                           
+                       }
+                   }
+               }
+           }
+           else {
+               let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+               ac.addAction(UIAlertAction(title: "OK", style: .default))
+               self.present(ac, animated: true)
+           }
+       }
+       
+       func signOut() {
+           do {
+               try Auth.auth().signOut()
+               DispatchQueue.main.async {
+                   let nav = UINavigationController(rootViewController: LoginViewController())
+                   nav.modalPresentationStyle = .fullScreen
+                   self.present(nav, animated: true, completion: nil)
+               }
+           } catch {
+               print("DEBUG: sign out error")
+           }
+       }
+    
     // MARK: - Helper Function
     
     func configController() {
@@ -348,7 +399,9 @@ class HomeViewController: UIViewController {
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
+            faceID()
             configController()
+            
         }
     }
     
