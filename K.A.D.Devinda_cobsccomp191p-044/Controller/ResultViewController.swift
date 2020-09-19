@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ResultViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class ResultViewController: UIViewController {
     }
     
     func showRating() {
+        print(result!)
         var rating = ""
         var color = UIColor.black
         guard let percent = result else { return }
@@ -39,9 +41,50 @@ class ResultViewController: UIViewController {
             rating = "VERY HIGH"
             color = UIColor.red
         }
+//        if result == 0 {
+//               rating = "VERY LOW"
+//               color = UIColor.green
+//           }
+//           else if result == 1 {
+//               rating = "LOW"
+//               color = UIColor.darkGray
+//           }
+//           else if result == 2 {
+//               rating = "MEDIUM"
+//               color = UIColor.yellow
+//           }
+//           else if result == 3 {
+//               rating = "HIGH"
+//               color = UIColor.orange
+//           }
+//           else if result == 4 {
+//               rating = "VERY HIGH"
+//               color = UIColor.red
+//               }
         lblRating.text = "\(rating)"
+        surveyResultUpdate()
         lblRating.textColor=color
     }
+    
+    func surveyResultUpdate() {
+         guard let result = result else { return }
+         guard let currentUid = Auth.auth().currentUser?.uid else { return }
+         
+         let values = [
+             "surveyResult": result,
+             "surveyDate": [".sv": "timestamp"]
+         ] as [String : Any]
+         
+         self.uploadSurveyResult(uid: currentUid, values: values)
+     }
+     
+     func uploadSurveyResult(uid: String, values: [String: Any]) {
+         REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+             if error == nil {
+                 print("No error")
+             }
+         }
+     }
     
     @objc func btnGoBackAction() {
         self.navigationController?.popToRootViewController(animated: true)

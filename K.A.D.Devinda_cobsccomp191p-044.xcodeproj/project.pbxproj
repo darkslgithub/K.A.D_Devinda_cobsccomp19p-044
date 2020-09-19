@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9105F38E251627B9008341B1 /* Notific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105F38D251627B8008341B1 /* Notific.swift */; };
 		91509CB925121D73003996A1 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91509CB825121D73003996A1 /* LoginTest.swift */; };
 		91509CBB25122943003996A1 /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91509CBA25122942003996A1 /* SafeActionsViewController.swift */; };
 		91509CBD25122A1B003996A1 /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91509CBC25122A1B003996A1 /* LocationInputUIView.swift */; };
@@ -71,6 +72,7 @@
 		14B1C4101FF0CEDF9641BF13 /* Pods-K.A.D.Devinda_cobsccomp191p-044-K.A.D.Devinda_cobsccomp191p-044UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K.A.D.Devinda_cobsccomp191p-044-K.A.D.Devinda_cobsccomp191p-044UITests.debug.xcconfig"; path = "Target Support Files/Pods-K.A.D.Devinda_cobsccomp191p-044-K.A.D.Devinda_cobsccomp191p-044UITests/Pods-K.A.D.Devinda_cobsccomp191p-044-K.A.D.Devinda_cobsccomp191p-044UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0AE566D983FA0B99933D71 /* Pods-K.A.D.Devinda_cobsccomp191p-044Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K.A.D.Devinda_cobsccomp191p-044Tests.debug.xcconfig"; path = "Target Support Files/Pods-K.A.D.Devinda_cobsccomp191p-044Tests/Pods-K.A.D.Devinda_cobsccomp191p-044Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		55B1BC13CBF0971CB9831830 /* Pods_K_A_D_Devinda_cobsccomp191p_044.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_A_D_Devinda_cobsccomp191p_044.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9105F38D251627B8008341B1 /* Notific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notific.swift; sourceTree = "<group>"; };
 		91509CB825121D73003996A1 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		91509CBA25122942003996A1 /* SafeActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
 		91509CBC25122A1B003996A1 /* LocationInputUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInputUIView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				91541C432511D52D0092C1F4 /* UserAnnotation.swift */,
 				91541C452511D53B0092C1F4 /* User.swift */,
+				9105F38D251627B8008341B1 /* Notific.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				91F401C425151FE600D44401 /* FullMapViewController.swift in Sources */,
 				91541C652511D6EA0092C1F4 /* SettingViewController.swift in Sources */,
 				91541C742511ED740092C1F4 /* SurveyCVCell.swift in Sources */,
+				9105F38E251627B9008341B1 /* Notific.swift in Sources */,
 				91541C702511EBEC0092C1F4 /* Service.swift in Sources */,
 				91541C4E2511D5DB0092C1F4 /* LocationHandler.swift in Sources */,
 				91541C5D2511D6A00092C1F4 /* UpdateViewController.swift in Sources */,

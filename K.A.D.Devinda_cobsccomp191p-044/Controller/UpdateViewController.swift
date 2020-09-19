@@ -152,6 +152,7 @@ class UpdateViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         self.fetchUserData()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Selectors
@@ -237,14 +238,14 @@ class UpdateViewController: UIViewController {
     }
     
     func uploadUserTemperature(uid: String, values: [String: Any]) {
-        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
-            if error == nil {
-                print("No error")
-                //self.tempLbl.text = values.first?.value as? String
-                self.tempLbl.text = "\(values["temperature"] as? String ?? "37"))°C"
-            }
-        }
-    }
+         REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+             if error == nil {
+                 print("No error")
+                 //self.tempLbl.text = values.first?.value as? String
+                 self.tempLbl.text = "\(values["temperature"] as? String ?? "0")°C"
+             }
+         }
+     }
     
     func setView(view: UIView, hidden: Bool) {
         UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
