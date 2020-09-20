@@ -348,17 +348,31 @@ class HomeViewController: UIViewController {
 
                 var usersVisible: Bool {
 
+//                    return self.mapView.annotations.contains { (annotation) -> Bool in
+//                        guard let userAnno = annotation as? UserAnnotation else { return false }
+//
+//                        if userAnno.uid == user.uid {
+//                            if temp >= 38.0 && result >= 75 {
+//                                userAnno.updateAnnotationPosition(withCoordinate: coordinate)
+//                               // self.notifyUser()
+//                                return true
+//                            }
+//                        }
+//
+//                        return false
+//                    }
                     return self.mapView.annotations.contains { (annotation) -> Bool in
                         guard let userAnno = annotation as? UserAnnotation else { return false }
-
+                        
                         if userAnno.uid == user.uid {
                             if temp >= 38.0 && result >= 75 {
                                 userAnno.updateAnnotationPosition(withCoordinate: coordinate)
-                               // self.notifyUser()
-                                return true
+                            } else {
+                                self.mapView.removeAnnotation(annotation)
                             }
+                            return true
                         }
-
+                        
                         return false
                     }
                 }
@@ -372,6 +386,7 @@ class HomeViewController: UIViewController {
                         }
                     }
                 }
+                
             }
 
         }

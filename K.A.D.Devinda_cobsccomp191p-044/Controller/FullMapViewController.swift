@@ -149,7 +149,7 @@ class FullMapViewController: UIViewController {
         func notifyUser() {
             if !UIApplication.topViewController()!.isKind(of: UIAlertController.self) {
                 AudioServicesPlayAlertSound(SystemSoundID(1322))
-                let alert = UIAlertController(title: "Warning!", message: "Possible COVID-19 infected person found near you", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Warning!", message: "Possible COVID-19 infected person near you", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
