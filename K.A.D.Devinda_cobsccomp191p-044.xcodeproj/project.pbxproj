@@ -30,7 +30,6 @@
 		91541C6E2511D9EE0092C1F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91541C6D2511D9ED0092C1F4 /* GoogleService-Info.plist */; };
 		91541C702511EBEC0092C1F4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C6F2511EBEC0092C1F4 /* Service.swift */; };
 		91541C742511ED740092C1F4 /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91541C732511ED740092C1F4 /* SurveyCVCell.swift */; };
-		91541C792511F4FA0092C1F4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91541C782511F4FA0092C1F4 /* Info.plist */; };
 		9165450D2512853E002D46A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165450C2512853E002D46A4 /* ProfileViewController.swift */; };
 		9170214C250FE9FF005B8AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170214B250FE9FF005B8AD7 /* AppDelegate.swift */; };
 		91702155250FEA03005B8AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91702154250FEA03005B8AD7 /* Assets.xcassets */; };
@@ -415,7 +414,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91541C792511F4FA0092C1F4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

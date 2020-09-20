@@ -70,20 +70,9 @@ class SplashThreeViewController: UIViewController {
                            return questionOneLabel
                        }()
              
-         //    private let nextLabel: UILabel = {
-         //                     let nextLabel = UILabel()
-         //                     nextLabel.text = "Next"
-         //                     nextLabel.font = UIFont(name: "Avenir-Light", size: 18)
-         //                     nextLabel.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
-         //                     nextLabel.textColor = .blue
-         //                     return nextLabel
-         //                 }()
-         //
              let nextButton: UIButton = {
                     let button = UIButton(type: .system)
                     let attributedTitle = NSMutableAttributedString(string: "Next", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint])
-                    
-         //           attributedTitle.append(NSAttributedString(string: "Next", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
                     
                     button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
                  
@@ -91,10 +80,7 @@ class SplashThreeViewController: UIViewController {
                     button.setAttributedTitle(attributedTitle, for: .normal)
                     return button
                 }()
-             
-
-                 
-                 
+                                               
                  // MARK: - Lifecycale
                  
                  override func viewDidLoad() {
@@ -104,8 +90,6 @@ class SplashThreeViewController: UIViewController {
                      configUI()
                  }
                  
-                
-                     
                       @objc func handleGoBack() {
                            navigationController?.popViewController(animated: true)
                         }
@@ -121,8 +105,8 @@ class SplashThreeViewController: UIViewController {
                      configNavBar()
                      
                       view.backgroundColor = .white
-                            view.addSubview(backButton)
-                            backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 10, paddingLeft: 16, width: 40, height: 40)
+                     view.addSubview(backButton)
+                    backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 10, paddingLeft: 16, width: 40, height: 40)
              
                      //view.backgroundColor = .white
                      view.addSubview(titleLabel)
@@ -147,27 +131,10 @@ class SplashThreeViewController: UIViewController {
                     view.addSubview(NextImgView)
                     NextImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 450, width: 100, height: 35)
                     NextImgView.centerX(inView: view)
-                     
-                     //view.backgroundColor = .white
-                     //view.addSubview(nextButton)
-         //            nextLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 550)
-         //            nextLabel.centerX(inView: view)
-                     
+
                      view.addSubview(nextButton)
                      nextButton.centerX(inView: view)
                      nextButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 550)
-                     
-         //            let stack = UIStackView(arrangedSubviews: [questionOneLabel])
-         //            stack.axis = .vertical
-         //            stack.distribution = .fillEqually
-         //            stack.spacing = 30
-
-         //            view.addSubview(stack)
-         //            stack.anchor(top: WelcomeImgView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 16, paddingRight: 16)
-         //
-         //            view.addSubview(stack)
-         //            stack.anchor(top: questionOneContainerView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 800)
-
 
                  }
                  
