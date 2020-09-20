@@ -16,8 +16,8 @@ class LoginViewController: UIViewController {
         let label = UILabel()
         label.text = "NTAXI"
         label.font = UIFont(name: "Avenir-Light", size: 36)
-        label.textColor = UIColor(white: 1, alpha: 0.8)
-        
+       // label.textColor = UIColor(white: 1, alpha: 0.8)
+        label.textColor = .updatetilecolor
         return label
     }()
     
@@ -66,6 +66,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         //NawBar
         view.backgroundColor = UIColor.white
@@ -135,7 +136,8 @@ class LoginViewController: UIViewController {
         
         configureNavigationBar()
         
-        view.backgroundColor = .whiteBackground
+        //view.backgroundColor = .whiteBackground
+         view.backgroundColor = .updatetilecolor
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)

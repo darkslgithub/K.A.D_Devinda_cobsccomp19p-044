@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        //window?.rootViewController = TestprofileViewController()
+       // window?.rootViewController = TestContact()
         window?.rootViewController = MainTabBarController()
         return true
     }

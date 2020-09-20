@@ -75,7 +75,7 @@ class CreateNotificVC: UIViewController {
     private let createBtn: UIButton = {
         let btn = UIButton()
         btn.setTitle("CREATE", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
+        btn.setTitleColor(.black, for: .normal)
         btn.backgroundColor = .mainBlueTint
         btn.layer.cornerRadius = 5.0
         btn.layer.masksToBounds = true

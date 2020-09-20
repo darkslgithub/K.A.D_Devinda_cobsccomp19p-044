@@ -46,7 +46,7 @@ class ProfileViewController: UIViewController {
       
       private let avatar: UIImageView = {
           let image = UIImageView()
-          image.image = UIImage(named: "camara")
+          image.image = UIImage(named: "color-cam")
           image.layer.cornerRadius = 50;
           image.layer.masksToBounds = true
           image.clipsToBounds = true

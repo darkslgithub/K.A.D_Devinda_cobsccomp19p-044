@@ -20,6 +20,7 @@ extension UIColor {
     
     static let updatepagecolor = rgb(red: 64, green: 168, blue: 196)
     static let updatetilecolor = rgb(red: 199, green: 236, blue: 238)
+    static let maintabcolor = rgb(red: 6, green: 92, blue: 111)
     
 }
 

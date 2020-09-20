@@ -14,13 +14,14 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         //tabBar.barTintColor = UIColor(red: 38/255, green: 196/255, blue: 133/255, alpha:1)
-        tabBar.barTintColor = .updatetilecolor
+        tabBar.barTintColor = .maintabcolor
         setupTabBar()
     }
     
     func setupTabBar(){
         let homeController = UINavigationController(rootViewController: HomeViewController())
-        homeController.tabBarItem.image = UIImage(systemName: "house")
+       // homeController.tabBarItem.image = UIImage(systemName: "house")
+        homeController.tabBarItem.image = UIImage(named:"home")
         homeController.tabBarItem.title = "Home"
         
         let plusController = UINavigationController(rootViewController: UpdateViewController())

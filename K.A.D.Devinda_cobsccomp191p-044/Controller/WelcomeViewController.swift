@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
     private lazy var WelcomeImgView: UIImageView = {
         let imageview = UIImageView()
         imageview.frame = CGRect(x: 0, y: 0, width: 100, height:100)
-        imageview.image = UIImage(named:"corona-logo")
+        imageview.image = UIImage(named:"corona-logo-nobackground")
         imageview.layer.masksToBounds = true
         
        // view.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -96,7 +96,8 @@ class WelcomeViewController: UIViewController {
     func configUI(){
         configNavBar()
         
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
+       view.backgroundColor = .updatetilecolor
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
         titleLabel.centerX(inView: view)

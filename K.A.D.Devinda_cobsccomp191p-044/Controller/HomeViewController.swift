@@ -323,7 +323,7 @@ class HomeViewController: UIViewController {
 //        }
 //    }
 //
-//    // MARK:- FaceID
+    // MARK:- FaceID
 //
 //       func faceID(){
 //           let context = LAContext()
@@ -370,7 +370,7 @@ class HomeViewController: UIViewController {
 //               print("DEBUG: sign out error")
 //           }
 //       }
-//
+
 //    // MARK: - Helper Function
 //
 //    func configController() {
@@ -509,12 +509,12 @@ class HomeViewController: UIViewController {
 
         private let mainTile: UIView = {
             let tile = UIView()
-           // tile.backgroundColor = .white
-            tile.backgroundColor = .updatetilecolor
+            tile.backgroundColor = .white
+           //tile.backgroundColor = .updatepagecolor
 
 
             let avatar = UIImageView()
-            avatar.image = UIImage(named: "corona-logo")
+            avatar.image = UIImage(named: "corona-logo-nobackground")
             tile.addSubview(avatar)
             avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 160, height: 90)
             avatar.centerY(inView: tile)
@@ -558,7 +558,8 @@ class HomeViewController: UIViewController {
             tile.layer.masksToBounds = true
 
             let bell = UIImageView()
-            bell.image = UIImage(systemName: "bell")
+           // bell.image = UIImage(systemName: "bell")
+            bell.image = UIImage(named: "gold-bell")
             bell.tintColor = .systemYellow
             tile.addSubview(bell)
             bell.anchor(left: tile.leftAnchor, paddingLeft: 20, width: 32, height: 32)
@@ -700,6 +701,7 @@ class HomeViewController: UIViewController {
         private let mapTile: UIView = {
             let tile = UIView()
             tile.backgroundColor = .white
+             
 
             return tile
         }()
@@ -726,6 +728,58 @@ class HomeViewController: UIViewController {
             self.fetchOtherUsers()
             self.updateUserLocation()
         }
+    
+    // MARK:- FaceID
+
+         func faceID(){
+             let context = LAContext()
+             var error: NSError?
+
+             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                 let reason = "Identify yourself!"
+
+                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                     [weak self] success, authenticationError in
+
+                     DispatchQueue.main.async {
+                         if success {
+                             let ac = UIAlertController(title: "Authentication success", message: "Well Done", preferredStyle: .alert)
+                             ac.addAction(UIAlertAction(title: "Happy", style: .default))
+                             self?.present(ac, animated: true)
+                         } else {
+                             let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
+                             ac.addAction(UIAlertAction(title: "OK", style: .default))
+                             self?.signOut()
+                             //  self?.present(ac, animated: true)
+                             self?.dismiss(animated: true, completion: nil)
+
+                         }
+                     }
+                 }
+             }
+             else {
+                 let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+                 ac.addAction(UIAlertAction(title: "OK", style: .default))
+                 self.present(ac, animated: true)
+             }
+         }
+
+         func signOut() {
+             do {
+                 try Auth.auth().signOut()
+                 DispatchQueue.main.async {
+                     let nav = UINavigationController(rootViewController: LoginViewController())
+                     nav.modalPresentationStyle = .fullScreen
+                     self.present(nav, animated: true, completion: nil)
+                 }
+             } catch {
+                 print("DEBUG: sign out error")
+             }
+         }
+    
+         
+    
+    
 
         // MARK: - Selectors
 
@@ -773,9 +827,9 @@ class HomeViewController: UIViewController {
                         guard let userAnno = annotation as? UserAnnotation else { return false }
 
                         if userAnno.uid == user.uid {
-                            if temp >= 38.0 && result >= 3 {
+                            if temp >= 38.0 && result >= 75 {
                                 userAnno.updateAnnotationPosition(withCoordinate: coordinate)
-                                self.notifyUser()
+                               // self.notifyUser()
                                 return true
                             }
                         }
@@ -787,9 +841,9 @@ class HomeViewController: UIViewController {
                 if !usersVisible {
                     // ignore own annotation
                     if user.uid != currentUid {
-                        if temp >= 38.0 && result >= 3 {
+                        if temp >= 38.0 && result >= 75 {
                             self.mapView.addAnnotation(annotation)
-                            self.notifyUser()
+                           // self.notifyUser()
                         }
                     }
                 }
@@ -863,18 +917,19 @@ class HomeViewController: UIViewController {
                     self.present(nav, animated: true, completion: nil)
                 }
             } else {
+                faceID()
                 configController()
             }
         }
 
-        func notifyUser() {
-            if !UIApplication.topViewController()!.isKind(of: UIAlertController.self) {
-                AudioServicesPlayAlertSound(SystemSoundID(1322))
-                let alert = UIAlertController(title: "Warning!", message: "Possible COVID-19 infected person found near you", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                self.present(alert, animated: true)
-            }
-        }
+//        func notifyUser() {
+//            if !UIApplication.topViewController()!.isKind(of: UIAlertController.self) {
+//                AudioServicesPlayAlertSound(SystemSoundID(1322))
+//                let alert = UIAlertController(title: "Warning!", message: "Possible COVID-19 infected person found near you", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//                self.present(alert, animated: true)
+//            }
+//        }
 
     }
 

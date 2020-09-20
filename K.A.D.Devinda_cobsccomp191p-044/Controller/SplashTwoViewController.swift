@@ -64,7 +64,7 @@ class SplashTwoViewController: UIViewController {
           
           private let questionOneLabel: UILabel = {
                         let questionOneLabel = UILabel()
-                        questionOneLabel.text = "When and how to wash your hands"
+                        questionOneLabel.text = "Avoid touching your face"
                         questionOneLabel.font = UIFont(name: "Avenir-Light", size: 18)
                         questionOneLabel.textColor = .black
                         return questionOneLabel
